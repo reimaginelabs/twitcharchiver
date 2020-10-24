@@ -1,2 +1,2 @@
 # twitcharchiver
-Python package for archiving VODs from Twitch.tv
+C# application and libraries for archiving VODs from Twitch.tv
