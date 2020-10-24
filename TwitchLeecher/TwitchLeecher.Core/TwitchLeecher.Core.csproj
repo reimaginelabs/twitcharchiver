@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{EE50464E-7667-4223-9FDE-05B0AE0D90CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwitchLeecher.Core</RootNamespace>
+    <AssemblyName>TwitchLeecher.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TwitchLeecher.Shared\TwitchLeecher.Shared.csproj">
+      <Project>{37aac23f-da34-4158-b32f-ca4a59ad71a9}</Project>
+      <Name>TwitchLeecher.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Attributes\EnumDisplayNameAttribute.cs" />
+    <Compile Include="Enums\DownloadState.cs" />
+    <Compile Include="Enums\LoadLimitType.cs" />
+    <Compile Include="Enums\SearchType.cs" />
+    <Compile Include="Enums\VideoType.cs" />
+    <Compile Include="Events\DownloadsCountChangedEvent.cs" />
+    <Compile Include="Events\VideosCountChangedEvent.cs" />
+    <Compile Include="Events\RemoveDownloadEvent.cs" />
+    <Compile Include="Events\PreferencesSavedEvent.cs" />
+    <Compile Include="Models\CropInfo.cs" />
+    <Compile Include="Models\DownloadTask.cs" />
+    <Compile Include="Models\MainWindowInfo.cs" />
+    <Compile Include="Models\VodAuthInfo.cs" />
+    <Compile Include="Models\DownloadParameters.cs" />
+    <Compile Include="Models\FilenameWildcards.cs" />
+    <Compile Include="Models\MenuCommand.cs" />
+    <Compile Include="Models\RuntimeData.cs" />
+    <Compile Include="Models\Preferences.cs" />
+    <Compile Include="Models\SearchParameters.cs" />
+    <Compile Include="Models\TwitchVideo.cs" />
+    <Compile Include="Models\TwitchVideoDownload.cs" />
+    <Compile Include="Models\TwitchVideoQuality.cs" />
+    <Compile Include="Models\UpdateInfo.cs" />
+    <Compile Include="Models\VodPlaylist.cs" />
+    <Compile Include="Models\VodPlaylistPart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
