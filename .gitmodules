@@ -4,3 +4,6 @@
 [submodule "TwitchLeecher"]
 	path = TwitchLeecher
 	url = https://github.com/Franiac/TwitchLeecher.git
+[submodule "RechatTool"]
+	path = RechatTool
+	url = https://github.com/jdpurcell/RechatTool.git
