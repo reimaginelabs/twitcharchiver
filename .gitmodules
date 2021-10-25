@@ -1,0 +1,6 @@
+[submodule "TwitchLib"]
+	path = TwitchLib
+	url = https://github.com/TwitchLib/TwitchLib.git
+[submodule "TwitchLeecher"]
+	path = TwitchLeecher
+	url = https://github.com/Franiac/TwitchLeecher.git
