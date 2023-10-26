@@ -7,3 +7,6 @@
 [submodule "RechatTool"]
 	path = RechatTool
 	url = https://github.com/jdpurcell/RechatTool.git
+[submodule "TwitchDownloader"]
+	path = TwitchDownloader
+	url = https://github.com/lay295/TwitchDownloader
